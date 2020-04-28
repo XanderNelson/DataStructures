@@ -1,0 +1,42 @@
+Binary Heaps
+
+  What are they
+    -binary tree
+    -not a BST
+    -satisfies one of the heap ordering properties
+    -min-heap
+        -the value of each node is greater than or equal
+          to the value of its parent
+    -has to be a complete tree
+
+    Applications- sorting, priority queues
+
+    Heap Implementation
+
+
+    Min Heap ADT
+
+    public:
+      init();
+      insert(value);
+      peek();
+      printHeap();
+      extractMin();
+
+    private:
+      int *heap;//point to first element of array
+      int capacity;//optional
+      int currentSize; //how many elements in heap
+
+      contructor:
+      MinHeap(int c)
+      {
+        currentSize = 0;
+        capacity = c;
+        heap = new int[capacity];
+      }
+
+      insert(value)
+        if currentSize == capacity
+          "full heap"
+        else

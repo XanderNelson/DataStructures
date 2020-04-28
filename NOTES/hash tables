@@ -1,0 +1,108 @@
+Hash Tables
+  -data structure that uses mapping to assign a "record"
+    to a unique index of an array
+
+  -say we want to store the name and sid of a group of students
+
+  Key: name
+  value: SID
+
+  hashFunction("anna") => generates a unique index => 2
+
+  hashFunction("jamie")=>0
+  hashFunction("brian")=>1
+
+  two components
+    1) array for storing the records
+    2) hash function for generating the unique code given a key
+        hash function is repeatable
+        hash("billy") => 7, will always get a 7
+        unique code is used as an array index
+
+  hash functions
+    one of the simplest:
+          -sum the values in a string
+          -then mod(%) by array length (table size)
+
+    hashSum(key, keylength, tablesize)
+    {
+      sum = 0;
+      for(int i = 0; i < keylength-1; i++)
+      {
+        sum = sum + key[i];
+      }
+      return sum%tablesize
+    }
+
+    E.G.
+        key = "anna"
+        keylength = 4;
+        tablesize = 4;
+
+      A= 41
+      n=110
+      n=110
+      a=97
+
+      348%4 = 2;
+
+store records in a hash table
+  1) calculate index value (hash the key)
+  2) write the data to hash table at the index
+
+retrieve records
+  1)use search key to calculate index
+  2)read from the index
+
+what is the cost of store? retrieve?
+  O(1) for both
+
+
+
+#include <iostream>
+using namespace std;
+
+struct student
+{
+  string name;
+  int sid;
+};
+
+int hashSum(string key, int keyLength, int tableSize)
+{
+  int sum = 0;
+  for(int i = 0; i<keyLength; i++)
+  {
+    sum = sum + key[i];
+  }
+  return sum%tableSize;
+}
+
+
+int main()
+{
+  int hashSize = 4;
+  student hashTable[hashSize];
+
+  //store records in the hash table
+  //create a record
+  student sIn;
+
+  sIn.name = "anna";
+  sIn.sid = 823;
+  int index = hashSum(sIn.name,4,hashSize);
+
+  hashTable[index] = sIn;
+
+  //retrieve the record from the hash table
+  //calculate index
+
+  student sOut = hashTable[hashSum("anna", 4, hashSize)]
+
+  return 0;
+}
+
+Struct record
+{
+  string key;
+};

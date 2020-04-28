@@ -1,0 +1,53 @@
+Dynamically allocated memory
+  Automatic variables get allocated on the stack
+  Dynamically allocated variables get allocated at run-time and use
+    the heap (free-store).
+
+    "new" and "delete"
+
+  have to use a pointer to allocate memory dynamically.
+
+  int *p1;//declare pointer
+  p1 = new int;//nameless variable
+
+  delete p1; // free the memory back to the heap, does not delete pointer
+
+  p1 = NULL;//good coding practice, pointer is pointing to nothing
+
+Dynamically allocated arrays
+
+  length 5 array:
+
+  int n;
+  int *ptr;
+  n=5;
+
+  cin >> n;//could have cin here
+
+  ptr = new int[n];
+  for(int i = 0; i < n; i++)
+  {
+    cin >> ptr[i];
+  }
+
+  delete [] ptr; //deallocate entire array
+
+Array doubling example
+
+  1. create N-length dynamic array
+  2. read in N values to fill array
+  3. "Double" the array length, keeping the first N elements in place
+
+  approach
+  1. N length dynamic arrays (a)
+  2. fill the array
+  3. create a new array of 2N length (temp)
+  4. copy over values from 1st array to second array
+
+    a -> [] N
+    temp -> []2N
+
+  5. clean up
+      1.Free up memory of "a"//delete a
+      2. make "a" point to the same address as temp
+      3. temp = NULL;

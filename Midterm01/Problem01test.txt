@@ -1,0 +1,7 @@
+Empty test: 0
+
+Test list: 2, 3, 4, 2, 3, 6 = 14
+
+Test list: 1, 3, 5, 7, 3, 3 = 0
+
+Test list: 1, 3, 5, 7, 3, 3 = 22

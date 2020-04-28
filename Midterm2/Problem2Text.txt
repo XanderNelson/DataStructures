@@ -1,0 +1,16 @@
+***********Elements in the heap are **********
+31.5 55 10 6.5 2 4 5 1.1
+After heap sort:
+
+1.1 4 2 6.5 5 10 55 31.5
+***********Elements in the heap are **********
+1.7 5.6 4 8 3
+After heap sort:
+8 4 3 5.6 1.7
+
+
+For this problem, I tried to implement the heap sort in the provided
+function definition. I couldnt quite get it to work. I know
+that if I would have added a recursive helper function I
+could have recursivly sorted the heap while using the left and right
+childs, similar to what I tried to do here.

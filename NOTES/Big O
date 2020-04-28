@@ -1,0 +1,40 @@
+how does the algorithm scale with input size
+what if
+  for j=0; N-1
+    for i = 0; N-1
+      cout << a[i]*;;//50ms
+
+  data structure operations
+    arrays: access O(1)
+            search O(N)
+            insert O(N)
+            delete O(N)
+
+    linked list:  access O(N)
+                  search O(N)
+                  insert O(1)
+                  delete O(1)
+
+
+    double linked list insert: at head O(1)
+                                  tail O(1)
+                                  middle O(1)
+                        deletion at head O(1)
+                                  tail O(1)
+                                  middleO(1)
+
+    Binary search tree (balanced)
+        A,S,I,D   O(log N)
+
+    Stack
+      A-O(N)  S-O(N) I-O(1)  D-O(1)
+
+    Stack
+      Data Structure that allows a specific order in which
+      operations on its data can be performed.
+        -can only add to the top(push)
+        -can only remove from top (pop)
+
+      usage of a stack:
+        e.g. call stack during program execution
+          -currently active subroutines

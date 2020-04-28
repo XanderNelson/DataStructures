@@ -1,0 +1,22 @@
+Which of the following is true about open addressing?
+hashed values will always be found in the table
+
+You are given a hash function f(x) = x % 2, where x is the value to be hashed and f(x) is the hash address. Linear probing is used to resolve collisions.
+The hash function receives the input {7, 6, 4, 3, 10} in that order. Place each number in the hash table at its correct address..
+0-6
+1-7
+2-4
+3-3
+4-10
+
+Consider a binary max-heap implemented using an array. Which one of the following array represents a binary max-heap?
+25,14,16,13,10,8,12
+
+What is the content of the array after two delete (extractMax) operations on the correct answer to the previous question?
+14,13,12,8,10
+
+What is the time complexity of searching for the minimum element in a binary max heap containing n elements?
+O( n )
+
+What is (are) the data structure(s) used for DFS and BFS?
+stack and queue

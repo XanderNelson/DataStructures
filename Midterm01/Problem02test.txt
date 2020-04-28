@@ -1,0 +1,24 @@
+
+Empty test:
+List empty!
+List of even integers:
+List of odd integers:
+
+
+
+Adding to even start: 2
+Adding to odd start: 3
+Adding to even: 4
+Adding to even: 4
+Adding to odd: 3
+Adding to even: 6
+List of even integers: 2, 6,
+List of odd integers: 3, 3,
+
+
+Adding to odd start: 1
+Adding to even start: 2
+Adding to odd: 3
+Adding to even: 4
+List of even integers: 2, 4,
+List of odd integers: 1, 3,

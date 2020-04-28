@@ -1,0 +1,136 @@
+pointers
+
+-Variable type for storing memory address
+
+  int* p; =declared
+  -int=specifies that the variable it points to is a variable type
+  -*=indicates the variable is a pointer type
+
+  int x = 3;
+  cout << &x << endl; = print address of x in hexidecimal format
+
+  & = address operator
+  int *p; = declared pointer
+  p=&x; = assigned value of p equal to address of x
+  int *p = &x
+
+  where to put the * ?
+
+  1. int* p;
+  2. int *p;
+  3. int * p;
+
+  could be written int x, *p, y, *p2
+
+-how to get target value
+  int *p = &x;
+
+  float *p2 = &y;
+  cout << x << endl; //print value in x
+  cout << *p << endl; //dereference operator
+  cout << p << endl; // will display address
+
+-Pass by pointers
+
+  void myPBP(int *p);
+    -like with pass-by-reference
+
+  void myPassByRef(int &x);
+
+  int main()
+  {
+    int a;
+    myPassByRef(a); //Passing address of a
+  }
+
+void myPassByPointer(int *p);
+
+    -e.g. call:
+          int *myPtr;
+          myPassByPointer(myPtr);
+
+    -e.g. call:
+          int x;
+          myPassByPointer(&x);
+
+
+-function can also return a pointer type
+    e.g.
+      int *foo(){
+      int x=3;
+      int *p = &x;
+      return p;
+      }
+
+
+void foo(int x, float &y, int arr[], int *x)
+
+by-value: caller only passes calue. caller calls with non-pointer type
+
+by-reference: caller gives access to original variable. caller calls with non-pointer type.
+
+by-array: caller gives address of 1st array element, caller calls w/ array type
+
+by-pointer: caller gives address. Caller calls with pointer type.
+
+
+int arr[5];
+int *p = arr;
+
+int main()
+{
+  int a = 4;
+  float b = 3.1;
+
+  int arr[6];
+
+  int x;
+  int *ptr = &x;
+
+  foo(a, b, arr, ptr);
+}
+
+pointer is described by what type it points to
+
+2
+
+
+void func(int x)
+{
+  x = 12*x+7
+}
+
+int main(int argc, char const *argv[])
+{
+  &//
+  int x = 4;
+  cout << x << endl;
+  cout << &x << endl;
+  return 0;
+}
+
+automatic(local) vs dynamic variables
+
+datatype *ptr_
+
+user defined types
+    pointer to a struct
+
+  struct person{
+    string name;
+    int age;
+  };
+
+  int main()
+  {
+    person p1;
+    person *ptr;//pointer to person types
+    ptr= &p1;
+    //syntax for accessing members of struct via pointers
+
+    (*ptr).name = "Alaba";
+    (*ptr).age = 27;
+
+    //equivalent: ptr->name = "Alaba";
+    //ptr->age = 27;
+  }

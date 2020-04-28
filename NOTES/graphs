@@ -1,0 +1,62 @@
+GRAPHS
+  -different from trees
+  -less restricted
+  -more complex
+  -more degrees of freedom
+  -each graph contains some kind of key and a list of edges
+  -unlike a bst, there are no set relationships between vertices
+  -all relationships have to be explicitly set
+  -ADT
+    -undirected
+    -weighted
+    -Private:
+      -vertices
+    -Public
+      -init()
+      -insertVertex(vlaue)
+      -insert edge(start vertex, end vertex, weight)
+      -delete vertex(value)
+      -delete edge(start value, end value)
+    -struct vertex
+    {
+      string key;
+      vector<adj Vertex> adj;
+
+    };
+
+    -struct addVertex
+    {
+      vertex *V;
+      int weight;
+    }
+
+    stl vectors
+    -include the vector library
+
+
+
+    int main()
+    {
+      vector<int> v0;
+
+      v0={2,2,7,0};
+
+      v0.push_back(9);
+
+      v0.pop_back();
+
+      vector<int> v1(7);
+      v1.resize(20);
+    }
+
+
+
+
+
+
+
+
+
+
+
+      

@@ -1,0 +1,38 @@
+Creating tree
+New tree created with 5
+2 has been added
+1 has been added
+4 has been added
+7 has been added
+10 has been added
+8 has been added
+6 has been added
+----------------Intial tree is ---------------
+
+
+                     10
+
+                               8
+
+           7
+
+                     6
+
+ 5
+
+                     4
+
+           2
+
+                     1
+The sum of range: 1, 4:
+sum: 11
+sum: 6
+The sum of range: 4, 6:
+sum: 12
+sum: 21
+sum: 15
+
+**************
+I did not have enough time to figure out my printing,
+but the last number is the final sum

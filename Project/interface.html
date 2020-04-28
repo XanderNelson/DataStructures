@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- <script>
+      var openFile = function(event)
+      {
+        var input = event.target;
+        //var input = "Game.txt";
+        var reader = new FileReader();
+        reader.onload = function()
+        {
+          var text = reader.result;
+          var node = document.getElementById('output');
+          node.innerText = text;
+          console.log(reader.result.substring(0, 200));
+        };
+        //input.files[0] = "Game.txt";
+        reader.readAsText(input.files[0]);
+        //window.location.reload(true);
+      };
+
+      var fs = require("fs");
+      var fileName = "Game.txt";
+
+    fs.exists(fileName, function(exists) {
+      if (exists)
+      {
+        fs.stat(fileName, function(error, stats) {
+          fs.open(fileName, "r", function(error, fd) {
+            var buffer = new Buffer(stats.size);
+
+            fs.read(fd, buffer, 0, buffer.length, null, function(error, bytesRead, buffer) {
+              var data = buffer.toString("utf8", 0, buffer.length);
+
+              console.log(data);
+              fs.close(fd);
+            });
+          });
+        });
+      }
+    }); -->
+
+    </script>
+      <link rel="stylesheet" type="text/css" href="web/css/tamportal.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <title>BLACKJACK</title>
+    </head>
+    <body>
+      <main>
+        <header>
+          <h1>BLACKJACK</h1>
+        </header>
+        <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+      <div id='output'>
+
+      </div>
+        <script src="index.js">location.reload(true);</script>
+      </main>
+    </body>

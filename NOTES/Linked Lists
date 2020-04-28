@@ -1,0 +1,118 @@
+two cases
+A) empty list
+  1. create new node
+  2. populate key with value
+  3. set head -> next = nullptr;
+  4. set tail = head
+
+B) not empty list
+  1. create a new node
+  2. populate key with value
+  3. set next to null
+  4. make old tail -> next
+      point to new node
+  5. make tail pointer point to new node
+
+
+
+SLL:: displayList()
+    1.set pointer = head
+    2.print key of pointer
+    3.set pointer = pointer -> next
+    4. repeat 2 and 3 until pointer = null
+
+
+  void insert(string afterMe, string newItem)
+  {
+    search(afterme)
+    if(afterMe == "")//node to be made head
+    {
+      Node *temp = new Node;
+      temp->key = newValue;
+      temp->next = head;
+      head=temp;
+      temp = nullptr;
+    }
+    else
+    {
+      Node *last = search(afterMe);
+      if(last == nullptr)
+      {
+        cout << "Node not found" <<endl;
+      }
+      else if(last->next == nullptr)
+      {
+        appendNode(newValue);
+      }
+      else
+      {
+        //last is either head or in the middle
+        Node *temp = new Node;
+        temp -> key = newValue;
+        temp -> next = last->next;
+        last->next = temp;
+        temp = nullptr;
+      }
+    }
+  }
+
+
+
+  push(item)
+  {
+    1. create new node
+    2. if(isEmpty)
+        {
+        point top to new node
+        set top->next to null
+        }
+        else
+        {
+          temp->next = top
+          top = next
+          temp - null
+        }
+
+        node *pop()
+        if(!isEmpty)
+        {
+          temp = top->next
+          return temp;
+        }
+  }
+array implemention:
+
+private:
+int top;
+int count;
+
+string a[MAXSIZE];
+
+bool isFull
+
+void push(newItem)
+{
+  if(!isFull)
+  {
+    a[top] = newItem
+    top++;
+  }
+  else
+  {
+    "Stack overflow";
+  }
+}
+
+queue
+
+-similar to Stack
+-allows for specific order of operations on your structure
+
+enqueue- add new element
+      -adds at tail
+dequeue- remove the element
+      - remove the element
+      -removes from head
+implementations
+1.simple linear
+2.circular array
